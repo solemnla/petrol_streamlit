@@ -4,7 +4,7 @@ import pandas as pd
 import streamlit as st
 
 # 文件路径
-file_dir = st.text_input('请输入数据文件夹的路径：（读取文件夹下inputs.csv及operation_records.csv）', value='~/Downloads/petrolstock')  # 请将此路径替换为你的CSV文件路径
+file_dir = st.text_input('请输入数据文件夹的路径：（读取文件夹下inputs.csv及operation_records.csv）', value='petrolstock')  # 请将此路径替换为你的CSV文件路径
 
 st.title('入库操作')
 # 加载数据
