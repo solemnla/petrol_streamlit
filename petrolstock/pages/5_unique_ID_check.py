@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 
 # 文件路径
-filepath = st.text_input('请输入入库数据CSV文件路径：', value='~/Downloads/petrolstock/operation_records.csv')  # 请将此路径替换为你的CSV文件路径
+filepath = st.text_input('请输入入库数据CSV文件路径：', value='petrolstock/operation_records.csv')  # 请将此路径替换为你的CSV文件路径
 
 # Display the title of the app
 st.title('条目检查')
