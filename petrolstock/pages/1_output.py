@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 
 # 文件路径
-file_dir = st.text_input('请输入数据文件夹的路径：（读取文件夹下operation_records.csv）', value='~/Downloads/petrolstock')  # 请将此路径替换为你的CSV文件路径
+file_dir = st.text_input('请输入数据文件夹的路径：（读取文件夹下operation_records.csv）', value='petrolstock')  # 请将此路径替换为你的CSV文件路径
 
 # Display the title of the app
 st.title('出库操作')
