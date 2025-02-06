@@ -49,6 +49,13 @@ output_df['operation'] = '转出'
 
 output_selection = st.data_editor(output_df, height=200, num_rows="dynamic", disabled=output_df.columns[-4:])
 
+if output_selection[['库区罐号', '实际量', '入库ID']].isnull().values.any():
+    st.error('库区罐号、实际量、入库ID不能为空！')
+
+check_table = output_selection[['库区罐号','入库ID', '实际量']].merge(available_values.rename(columns={'实际量':'存量'}), on=['库区罐号','入库ID'])
+if sum(check_table['实际量'] > check_table['存量']) > 0:
+    st.error('出库数量大于存量！')
+
 st.write(f'转出总数：{sum(output_selection["实际量"]):.3f}')
 
 # 选择转入的ID及数量
